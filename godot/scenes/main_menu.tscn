@@ -1,0 +1,144 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8e2mxsoom661"]
+
+[ext_resource type="Script" uid="uid://bulntsq082lq3" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="StyleBox" uid="uid://be3y470h5xbe0" path="res://styles/button_normal.tres" id="1_ekxnf"]
+[ext_resource type="StyleBox" uid="uid://r7motlbtjq24" path="res://styles/button_hover.tres" id="2_bqqt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vue75"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.048680164, 0.14150909, 0.15933502, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.0
+offset_right = 209.0
+offset_bottom = 98.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 31
+text = "The Side Quests of John Piss"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="m_main" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="b_play" type="Button" parent="m_main"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_ekxnf")
+theme_override_styles/hover = ExtResource("2_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vue75")
+text = "Play"
+
+[node name="b_settings" type="Button" parent="m_main"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_ekxnf")
+theme_override_styles/hover = ExtResource("2_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vue75")
+text = "Settings
+"
+
+[node name="b_quit" type="Button" parent="m_main"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_ekxnf")
+theme_override_styles/hover = ExtResource("2_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vue75")
+text = "Quit"
+
+[node name="m_settings" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -82.0
+offset_right = -340.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="l_master" type="Label" parent="m_settings"]
+layout_mode = 2
+text = "Master Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s_master" type="HSlider" parent="m_settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="l_music" type="Label" parent="m_settings"]
+layout_mode = 2
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s_music" type="HSlider" parent="m_settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.7
+
+[node name="l_sfx" type="Label" parent="m_settings"]
+layout_mode = 2
+text = "SFX Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="s_sfx" type="HSlider" parent="m_settings"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="b_back" type="Button" parent="m_settings"]
+layout_mode = 2
+theme_override_styles/normal = ExtResource("1_ekxnf")
+theme_override_styles/hover = ExtResource("2_bqqt6")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vue75")
+text = "Back"
+
+[connection signal="pressed" from="m_main/b_play" to="." method="_on_b_play_pressed"]
+[connection signal="pressed" from="m_main/b_settings" to="." method="_on_b_settings_pressed"]
+[connection signal="pressed" from="m_main/b_quit" to="." method="_on_b_quit_pressed"]
+[connection signal="value_changed" from="m_settings/s_master" to="." method="_on_s_master_value_changed"]
+[connection signal="value_changed" from="m_settings/s_music" to="." method="_on_s_music_value_changed"]
+[connection signal="value_changed" from="m_settings/s_sfx" to="." method="_on_s_sfx_value_changed"]
+[connection signal="pressed" from="m_settings/b_back" to="." method="_on_b_back_pressed"]
