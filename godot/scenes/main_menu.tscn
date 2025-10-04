@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8e2mxsoom661"]
+[gd_scene load_steps=6 format=3 uid="uid://c8e2mxsoom661"]
 
 [ext_resource type="Script" uid="uid://bulntsq082lq3" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="StyleBox" uid="uid://be3y470h5xbe0" path="res://styles/button_normal.tres" id="1_ekxnf"]
 [ext_resource type="StyleBox" uid="uid://r7motlbtjq24" path="res://styles/button_hover.tres" id="2_bqqt6"]
+[ext_resource type="AudioStream" uid="uid://b2jw3q62tmjgp" path="res://sounds/jp_main_menu.ogg" id="4_wu84c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vue75"]
 
@@ -134,6 +135,12 @@ theme_override_styles/normal = ExtResource("1_ekxnf")
 theme_override_styles/hover = ExtResource("2_bqqt6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_vue75")
 text = "Back"
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wu84c")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [connection signal="pressed" from="m_main/b_play" to="." method="_on_b_play_pressed"]
 [connection signal="pressed" from="m_main/b_settings" to="." method="_on_b_settings_pressed"]
