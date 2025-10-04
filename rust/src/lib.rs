@@ -1,6 +1,8 @@
 use godot::classes::{Resource, Time};
 use godot::prelude::*;
 
+mod dialogues;
+mod npc;
 mod player;
 mod spinnn;
 
@@ -19,7 +21,6 @@ impl IResource for Loaded {
         let now = Time::get_time_string_from_system(&Time::singleton());
 
         godot_print!("{now} | Rust extension was loaded successfully!");
-        godot_print!("nyaa~");
 
         Self {}
     }

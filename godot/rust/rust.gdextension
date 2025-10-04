@@ -14,5 +14,3 @@ macos.debug.arm64 =      "res://../rust/target/debug/libjohn_p.dylib"
 macos.release.arm64 =    "res://../rust/target/release/libjohn_p.dylib"
 
 [icons]
-Spinner = "res://textures/resources/youngMAN.png"
-Player = "res://textures/resources/youngMAN.png"

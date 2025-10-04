@@ -1,1 +1,11 @@
-/target
+/target/.rustc_info.json
+/target/CACHEDIR.TAG
+/target/debug/.fingerprint
+/target/debug/build
+/target/debug/deps
+/target/debug/examples
+/target/debug/incremental
+/target/debug/libjohn_p.d
+/target/debug/libjohn_p.so
+/target/debug/.cargo-lock
+/target/doc

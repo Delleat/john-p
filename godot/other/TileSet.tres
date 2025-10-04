@@ -1,0 +1,22 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://drru4jsjinhqj"]
+
+[ext_resource type="Texture2D" uid="uid://cgf7bcblaj28r" path="res://textures/enviroment/angy.png" id="1_1xfry"]
+[ext_resource type="Texture2D" uid="uid://bem36ilhhp1y7" path="res://textures/enviroment/prt.png" id="1_684b6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xwa07"]
+texture = ExtResource("1_1xfry")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -3.381343, -8, -3.2014837)
+0:0/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_idj7w"]
+resource_name = "Prototype"
+texture = ExtResource("1_684b6")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 0
+sources/1 = SubResource("TileSetAtlasSource_idj7w")
+sources/0 = SubResource("TileSetAtlasSource_xwa07")
