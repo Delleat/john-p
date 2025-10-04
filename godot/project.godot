@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JohnP"
-run/main_scene="uid://ce2dc743xgb7y"
+run/main_scene="uid://c8e2mxsoom661"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
@@ -22,6 +22,7 @@ config/icon="uid://cnwrq15ns3rqu"
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/stretch/mode="canvas_items"
 
 [input]
 
